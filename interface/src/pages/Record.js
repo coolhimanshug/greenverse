@@ -2,8 +2,7 @@ import axios from 'axios';
 import { useAccount, useSignMessage } from 'wagmi'
 import { useEffect, useState, useEventListner } from 'react';
 import Loading from '../components/Loading';
-import { HuddleIframe } from "@huddle01/iframe";
-import { iframeApi } from '@huddle01/iframe';
+import { HuddleIframe, iframeApi } from "@huddle01/iframe";
 import {
     getAccessToken,
     getMessage,
@@ -24,12 +23,12 @@ function Record() {
 
     useEffect(() => {
         if(accessToken) {
-            iframeApi.connectWallet(accessToken)
-            iframeApi.initialize({
-                background: "",
-                wallets: ["metamask"]
-            });
-            setIsLoading(false)
+            // iframeApi.connectWallet(accessToken)
+            // iframeApi.initialize({
+            //     background: "",
+            //     wallets: ["metamask"]
+            // });
+            // setIsLoading(false)
         }
         console.log(accessToken)
     },[accessToken])
@@ -38,8 +37,13 @@ function Record() {
         console.log("Room id: ", roomUrl)
         if(roomUrl !== undefined && roomUrl.length > 0) {
             (async () => {
-                const message = await getMessage(address);
-                signMessage(message)
+                // const message = await getMessage(address);
+                // signMessage(message)
+                iframeApi.initialize({
+                    background: "",
+                    wallets: ["metamask"]
+                });
+                setIsLoading(false)
             })();
         }
     },[roomUrl])
