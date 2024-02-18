@@ -17,21 +17,21 @@ import Search from './pages/Search';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 const opBNB = {
-  id: 5611,
-  name: 'opBNB Testnet',
-  network: 'opBNB Testnet',
+  id: 2_978_282,
+  name: 'phoenix',
+  network: 'phoenix',
   nativeCurrency: {
     decimals: 18,
-    name: 'opBNB Testnet',
-    symbol: 'tBNB',
+    name: 'phoenix',
+    symbol: 'PHY',
   },
   rpcUrls: {
-    public: { http: ['https://opbnb-testnet-rpc.bnbchain.org'] },
-    default: { http: ['https://opbnb-testnet-rpc.bnbchain.org'] },
+    public: { http: ['https://d3.makingmemories.xyz'] },
+    default: { http: ['https://d3.makingmemories.xyz'] },
   },
   blockExplorers: {
-    etherscan: { name: 'SnowTrace', url: 'http://opbnbscan.com/' },
-    default: { name: 'SnowTrace', url: 'http://opbnbscan.com/' },
+    etherscan: { name: 'SnowTrace', url: '' },
+    default: { name: 'SnowTrace', url: '' },
   },
 }
 
