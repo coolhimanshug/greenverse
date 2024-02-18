@@ -35,7 +35,7 @@ const opBNB = {
   },
 }
 
-const { chains, provider } = configureChains([filecoinCalibration], [publicProvider()])
+const { chains, provider } = configureChains([opBNB], [publicProvider()])
 
 const { connectors } = getDefaultWallets({
   appName: 'My RainbowKit App',
